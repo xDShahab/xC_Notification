@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xC Notification</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+    <div class="hud">
+        <img src="../xC_Notification/img/Overall-HUD-PNG.png" alt="" />
+    </div>
+    <div id="notification-settings">
+        <div class="top-placeholder display-hover placeholder-translate-hover">
+            <div class="wrapper-placeholder">
+                <div class="bg-hover"></div>
+            </div>
+        </div>
+        <div class="onhud-placeholder display-hover placeholder-hover">
+            <div class="wrapper-placeholder">
+                <div class="bg-hover"></div>
+            </div>
+        </div>
+        <div class="left-placeholder display-hover placeholder-hover">
+            <div class="wrapper-placeholder">
+                <div class="bg-hover"></div>
+            </div>
+        </div>
+        <div class="bottom-placeholder display-hover placeholder-translate-hover">
+            <div class="wrapper-placeholder">
+                <div class="bg-hover"></div>
+            </div>
+        </div>
+        <div class="right-placeholder display-hover placeholder-hover">
+            <div class="wrapper-placeholder">
+                <div class="bg-hover"></div>
+            </div>
+        </div>
+        <div class="Hide-Notifications placeholder-hover toggle-btn"></div>
+        <div class="Enable-sound placeholder-hover toggle-btn"></div>
+
+        <div class="Exit-button placeholder-translate-hover"></div>
+        <div class="Select-text">
+            Please Select a Point To Display Notifications.
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="hepsi">
+            <!--<div class="noti-main">
+          <div class="stanim">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="auto" viewBox="0 0 100 100">
+              <defs>
+                <filter filterUnits="userSpaceOnUse" id="Filter_0" x="-1.5px" y="-1.5px" width="100%" height="100%">
+                  <feOffset in="SourceAlpha" dx="0" dy="14" />
+                  <feGaussianBlur result="blurOut" stdDeviation="4.583" />
+                  <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
+                  <feComposite operator="atop" in="floodOut" in2="blurOut" />
+                  <feComponentTransfer>
+                    <feFuncA type="linear" slope="0.54" />
+                  </feComponentTransfer>
+                  <feMerge>
+                    <feMergeNode />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <g class="testt" filter="url(#Filter_0)">
+                <path class="testt2" fill-rule="evenodd" stroke="#ff0000" stroke-width="3px" stroke-linejoin="miter" fill="none" d="M38.000,9.000 L260.000,9.000 C268.284,9.000 275.000,15.716 275.000,24.000 L275.000,59.000 C275.000,67.284 268.284,74.000 260.000,74.000 L38.000,74.000 C29.716,74.000 23.000,67.284 23.000,59.000 L23.000,24.000 C23.000,15.716 29.716,9.000 38.000,9.000 Z" />
+              </g>
+            </svg>
+          </div>
+          <div id="cornertopleft">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.5px" height="30.5px">
+              <path fill-rule="evenodd" stroke="#ff0000" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M3.000,26.000 L3.000,15.000 C3.000,15.000 4.221,3.000 18.000,3.000 C23.032,3.000 30.000,3.000 30.000,3.000 " />
+            </svg>
+          </div>
+          <div id="cornerbottomleft">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.5px" height="30.5px">
+              <path fill-rule="evenodd" stroke="#ff0000" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M3.000,3.000 L3.000,14.000 C3.000,14.000 4.221,26.000 18.000,26.000 C23.032,26.000 30.000,26.000 30.000,26.000 " />
+            </svg>
+          </div>
+          <div id="cornertopright">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.5px" height="30.5px">
+              <path fill-rule="evenodd" stroke="#ff0000" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M30.000,26.000 L30.000,15.000 C30.000,15.000 28.779,3.000 15.000,3.000 C9.968,3.000 3.000,3.000 3.000,3.000 " />
+            </svg>
+          </div>
+          <div id="cornerbottomright">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.5px" height="30.5px">
+              <path fill-rule="evenodd" stroke="#ff0000" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M30.000,3.000 L30.000,14.000 C30.000,14.000 28.779,26.000 15.000,26.000 C9.968,26.000 3.000,26.000 3.000,26.000 " />
+            </svg>
+          </div>
+          <div class="notification-wrapper">
+            <div class="left">
+              <div id="hataicon">
+                <img src="./img/warning.png" alt="" />
+              </div>
+            </div>
+            <div class="right">
+              <div class="texterror">
+                <h1>ERROR</h1>
+              </div>
+              <div class="textinput">
+                <h1>You need 1x bandage, 2x test, 3x test, 4x test, 5x test 4x test, 5x test4x test, 5x test4x test, 5x test.</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

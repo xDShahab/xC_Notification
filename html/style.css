@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hepsi {
+    animation: 1s opacity ease-in-out;
+    animation: 1s transition ease-in-out;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    transition: all 2s ease-out;
+}
+
+.wrapper {
+    position: absolute;
+}
+
+.noti-main:first-child {
+    margin-top: -38px;
+}
+
+.hud {
+    position: absolute;
+    bottom: -0.2rem;
+}
+
+.noti-main {
+    border-width: 3px;
+    border-color: rgb(43, 43, 43);
+    border-style: solid;
+    border-radius: 15px;
+    background-color: rgb(25, 28, 31);
+    box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.54);
+    position: relative;
+    width: 250px;
+    min-height: 63px;
+    z-index: 5;
+    margin-top: 2vh;
+    transition: all 0.1s ease-out;
+}
+
+.testt {
+    width: 100%;
+    height: 100%;
+}
+
+.testt2 {
+    width: 100vh;
+    height: 100vh;
+}
+
+.glowred {
+    position: absolute;
+    top: -1.2rem;
+    right: -1.2rem;
+    z-index: 5;
+    height: 200px;
+}
+
+.notification-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.cornertopleft {
+    z-index: 7;
+    position: absolute;
+    left: -0.3rem;
+    top: -0.4rem;
+    animation: 0.7s light ease-in-out infinite alternate;
+}
+
+#notification-settings {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    background: url(./img/Screen-Overlay.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-placeholder {
+    width: 255px;
+    height: 228px;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    background: url(./img/Top-Placeholder.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.placeholder-hover {
+    transition: transform 0.25s linear;
+}
+
+.placeholder-hover:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.placeholder-translate-hover {
+    transition: transform 0.25s linear;
+    transform: translateX(-50%);
+}
+
+.placeholder-translate-hover:hover {
+    cursor: pointer;
+    transform: scale(1.05) translateX(-50%);
+}
+
+.onhud-placeholder {
+    width: 255px;
+    height: 228px;
+    position: absolute;
+    left: 3%;
+    bottom: 30%;
+    background: url(./img/On-Hud-Placeholder.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-placeholder {
+    width: 255px;
+    height: 228px;
+    position: absolute;
+    left: 3%;
+    top: 15%;
+    background: url(./img/Left-Placeholder.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bottom-placeholder {
+    width: 255px;
+    height: 228px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    background: url(./img/Bottom-Placeholder.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.right-placeholder {
+    width: 255px;
+    height: 228px;
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    background: url(./img/Top-Placeholder.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrapper-placeholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 255px;
+    opacity: 0;
+    height: 68px;
+    background: url(https://cdn.discordapp.com/attachments/862018783391252500/939515851051241512/Error_Noti.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    transition: all 0.2s linear;
+}
+
+.Hide-Notifications {
+    width: 252px;
+    height: 65px;
+    position: absolute;
+    right: 3%;
+    bottom: 5%;
+    background: url(./img/Hide-Notifications.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Display-Notifications {
+    width: 252px;
+    height: 65px;
+    position: absolute;
+    right: 3%;
+    bottom: 5%;
+    background: url(./img/Show-Notifications.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Enable-sound {
+    width: 252px;
+    height: 65px;
+    position: absolute;
+    right: 3%;
+    bottom: 13%;
+    background: url(./img/Enable-Sound.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Disable-sound {
+    width: 252px;
+    height: 65px;
+    position: absolute;
+    right: 3%;
+    bottom: 13%;
+    background: url(./img/Disable-Sound.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Exit-button {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translateX(-50%);
+    background: url(./img/Exit-Button.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.Select-text {
+    position: absolute;
+    left: 50%;
+    bottom: 45%;
+    font-family: "Poppins";
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transform: translateX(-50%);
+}
+
+.cornerbottomleft {
+    z-index: 7;
+    position: absolute;
+    left: -0.25rem;
+    bottom: -0.65rem;
+    animation: 0.7s light ease-in-out infinite alternate;
+}
+
+.cornertopright {
+    z-index: 7;
+    position: absolute;
+    right: -0.4rem;
+    top: -0.4rem;
+    animation: 0.7s light ease-in-out infinite alternate;
+}
+
+.cornerbottomright {
+    z-index: 7;
+    position: absolute;
+    right: -0.4rem;
+    bottom: -0.65rem;
+    animation: 0.7s light ease-in-out infinite alternate;
+}
+
+.hataicon {
+    z-index: 12;
+    animation: 1s opacity ease-in-out infinite alternate;
+}
+
+.texttype {
+    font-family: "Poppins";
+    letter-spacing: 2px;
+    font-size: 7px;
+    color: white;
+    z-index: 13;
+}
+
+.texttype h1 {}
+
+.textinput {
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    font-size: 5px;
+    margin-bottom: 0.3vh;
+    z-index: 13;
+    color: white;
+}
+
+.stanim {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    fill: none;
+    height: 100%;
+    stroke-dasharray: 45 900;
+    stroke-linecap: round;
+    animation: 4s dondur infinite;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes light {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*@keyframes transition {
+  0% {
+    left: 22rem;
+  }
+  100% {
+    left: 1rem;
+  }
+}
+*/
+
+
+/* RESPONSIVE CODES DONT TOUCH */
+
+
+/*@media only screen and (max-width: 2560px) {
+  .hepsi {
+    display: flex;
+  }
+  .stanim {
+    display: flex;
+  }
+  .glowred {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .hepsi {
+    display: flex;
+    left: 3rem;
+  }
+  .stanim {
+    display: flex;
+  }
+  .glowred {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1376px) {
+  .hepsi {
+    display: flex;
+    transform: scale(0.8);
+  }
+  .hud {
+    transform: scale(0.8);
+    left: -1rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .hepsi {
+    display: flex;
+    left: -6rem;
+    transform: scale(0.7);
+  }
+  .hud {
+    transform: scale(0.7);
+    left: -2rem;
+  }
+}*/
