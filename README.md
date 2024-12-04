@@ -45,8 +45,8 @@ exports["xC_Notification"]:Notify("xCoore Test", 5000, "msg", {msgNumber= "512-2
 
 # Web
 
-- https://xcoore.ir/ 🌐
+- https://shahabsanei.ir/ 🌐
 
-# `Shahab#0128 💙
+# Discord : `shahabxd` 💙
 
 # Open Resource Of Codem Notif 🙂
