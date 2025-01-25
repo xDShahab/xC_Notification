@@ -41,7 +41,7 @@ exports["xC_Notification"]:Notify("xCoore Test", 5000, "msg", {msgNumber= "512-2
 
 # Discord
 
-- https://discord.gg/xcoore 🌐
+- https://discord.gg/Uwt4rudXMu 🌐
 
 # Web
 
